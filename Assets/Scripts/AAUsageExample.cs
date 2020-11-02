@@ -16,7 +16,7 @@ namespace UnityRoyale
 			refObject.Instantiate(Vector3.zero, Quaternion.identity, null).Completed += OnAssetInstantiated;
 		}
 
-		private void OnAssetInstantiated(IAsyncOperation<GameObject> asyncOp)
+		private void OnAssetInstantiated(AsyncOperationHandle<GameObject> asyncOp)
 		{
 			Debug.Log(asyncOp.Result.name + " loaded.");
 		}

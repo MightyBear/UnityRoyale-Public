@@ -22,7 +22,7 @@ namespace UnityRoyale
 
         //...
 
-		private void OnResourcesRetrieved(IAsyncOperation<IList<CardData>> obj)
+		private void OnResourcesRetrieved(AsyncOperationHandle<IList<CardData>> obj)
 		{
 			targetDeck.CardsRetrieved((List<CardData>)obj.Result);
 
